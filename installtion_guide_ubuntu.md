@@ -199,7 +199,10 @@ for more deatils refer - https://techexpert.tips/sonarqube/sonarqube-installatio
 ```
 docker run -d -p 9000:9000 sonarqube:lts
 
-#To run sonar Scan analysis
+#To run sonar Scan analysis with username and password
+mvn sonar:sonar -Dsonar.host.url=http://:9000/ -Dsonar.login= -Dsonar.password=``
+
+#To run sonar Scan analysis with token generated from sonarQube web page
 mvn sonar:sonar -Dsonar.host.url=http://:9000/ -Dsonar.password=```
 example: mvn sonar:sonar -Dsonar.host.url=http://34.16.160.171:9000/ -Dsonar.password=3a55fe59ec8bd1e0c2ab9f63a5d08f73eda84efc
 #the password is a token generated from sonarQube page: Administration -- Security --Entertoken--generate token
